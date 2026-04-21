@@ -1,0 +1,58 @@
+
+# list
+x = [1, 2, 3, 4, 5]
+
+# mutable sequence
+x[2] = 42
+
+for i in x:
+    print('i is {}'.format(i))
+
+print(type(x))
+
+# tuple
+x = (1, 2, 3, 4, 5)
+
+# immutable sequence
+# x[2] = 42
+# TypeError: 'tuple' object does not support item assignment
+
+for i in x:
+    print('i is {}'.format(i))
+
+print(type(x))
+
+# range
+x = range(10)
+# x = range(5, 10)
+# x = range(5, 50, 5)
+
+# immutable sequence
+# x[2] = 42
+# TypeError: 'range' object does not support item assignment
+
+for i in x:
+    print('i is {}'.format(i))
+
+print(type(x))
+
+# dictionary
+
+x = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5}
+
+for i in x:
+    print('i is {}'.format(i))
+
+print(type(x))
+
+# -----------
+
+x = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5}
+
+# mutable sequence
+x['two'] = 42
+
+for k, v in x.items():
+    print('k: {}, v: {}'.format(k, v))
+
+print(type(x))
