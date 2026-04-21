@@ -1,0 +1,11 @@
+{
+    "libro":{
+        "id": 1,
+        "titolo": "At the Mountains of Madness",
+        "genere": "Horror",
+        "autore": "H.P. Lovecraft",
+        "editore": "Mondadori",
+        "numeroPagine": 180
+    }
+
+}

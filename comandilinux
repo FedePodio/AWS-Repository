@@ -1,0 +1,78 @@
+-----------basic---------
+
+- ctrl d -> logout
+- ctrl c -> interrupt
+- q -> esci mod lett
+- tilde -> home dir
+- ls -> list 
+- -lah : L:long listening form A: all H: human readable
+- la -lah/home -> ls : elenca contenuto
+		-l mod estesa
+		-a : tutto
+		-h : leggibile
+		/home : indica posizionamento
+- $ ls -l --all --human-readable /home
+- man ls -> manuali
+- ls --help -> h comandi
+- cd -> cambi dir
+- pwd -> dir corrente
+- .. -> sali di dir
+- / -> dir principale sistema(root)
+- tilde -> home utente
+- tree -L1/ -> vedo alberatura sistema
+- $ echo "$SHELL" -> quale terminale sto utilizzando
+
+--------file-------
+
+- touch Nome -> crea vuoto, se esiste aggiorna timestamp
+- echo 'miao' > Nome -> crea se non c'è e sovrascrive eventuale contenuto
+- echo 'miao' >> Nome -> crea se non c'è e append
+- ls > output_ls -> esegue ls, reindirizza l'output come contenuto del file output_ls che ha appena creato
+- ls >> output_ls -> idem come sorpa
+- cat Nome -> legge contenuto 
+- nano Nome -> scrive
+- rm Nome -> cancella file
+
+-----directory-----------
+
+- mkdir miao -> creo directory
+- mkdir -p miao -> se non esiste miao crea la dir
+* -p parents : crea se non esiste : crea le dir genitore mancanti(mkdir -p corso/python/esercizi)
+- cp source destination -> copia
+- cp -R source destination -> copia ricorsiva
+* -R : tutti i file dentro dir | tutte le sottodir | copia file dentro
+  sottodir
+* -a -> archive in piu mantiene permessi, proprietari (u/g) timestamp,link simbolici e attributi spec
+- mv oldname newname -> rinomino
+- rm -r 'miao' -> rimuove dir e suo contenuto
+
+------------link simbolici--------
+
+- ln -s file nomelink -> link simbolico | puntatore
+
+--------------archivi-----------
+- tar cvf nomeMArchivio.tar dir1 dir2 dir3 filemiao fileciao ->creo
+- tar xvf nomeMArchivio.tar dir1 dir2 dir3 filemiao fileciao ->estraggo
+* c : create -> crea archivio
+* v : verbose -> mostra cosa sta facendo
+* f : file -> specifica nome archivio
+* x : extrect ( è possibile estrarre solo file specifici)
+* creo arch con tutte dir e file elencati non compressi
+
+--archivio compressore gzip Z compressione veloce(log)
+- tar czvf nomeMArchivio.tar dir1 dir2 dir3 filemiao fileciao
+- tar xzvf nomeMArchivio.tar dir1 dir2 dir3 filemiao fileciao
+
+--creo arch bz2 J compressione lenta(salvaspazio)
+- tar cjvf nomeMioArchivio.tar.bz2 directory1 directory2 dirctory3 file1
+
+--------------installazioni pacchetti---------
+
+*/etc/apt/sources.list.d/ -> dir contentete file di config dei repo apt aggiungo repository 
+    extra es php : installo da repo esterne e crea 	un file contenete info per apt su dove scaricare pacchetti
+
+*/etc/apt/apt.conf.d/ -> dir contenete config apt ( no repo) chaching 	aggiornamenti proxy sicurezza
+
+- apt update -> aggiorna repo
+- apt install 'esempio' -> installa pacchetti
+- apt upgrade -> danger!! effettua upgrade di pacchetti disponibili
