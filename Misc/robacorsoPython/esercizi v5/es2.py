@@ -1,0 +1,27 @@
+"""
+Autore: Federico Podio
+Data: 15/05/2026
+Titolo: Esercitazione PY 05
+"""
+# Esercizi sui dizionari
+# ES 2
+
+# Scrivete uno script Python per generare e stampare un dizionario che contenga un numero
+# (compreso tra 1 e n) nella forma (x, x*x).
+
+def generatore(n):
+
+    dizionario = {}
+    for x in range(1, n + 1):
+        dizionario[x] = x * x
+    return dizionario
+
+
+n = int(input("scrivi un numero >= 1: "))
+
+if n < 1:
+    print("Error")
+else:
+    risultato = generatore(n)
+
+    print("dizionario:", risultato)

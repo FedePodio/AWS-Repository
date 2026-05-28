@@ -1,0 +1,36 @@
+PARTE C — Teoria, Federico Podio
+
+DOMANDA 1 - Differenza tra errore di sintassi ed errore logico. Fai un esempio per ciascuno.
+
+errore di sinstassi c'è quando c'è un errore grammaticale nel codice, ad es:
+print(f"nome}, Totale pranzo: {totale:.2f} euro") dove manca una parentesi prima di nome
+errore di logica invece è grammaticalmente corretto ma rompe o sbaglia il programma, ad es:
+lunghezza = len(password) <= 8     quando vorresti una password di 8 o piu caratteri
+
+------------------------------------------------------------------------------------------------
+DOMANDA 2 - Spiega cosa sono le eccezioni in Python e come funziona try/except.
+
+le eccezioni si presentano quando, anche sei il codice è tecnicamente giusto, causa un errore 
+quando lo si esegue
+try/except servono a bloccare i casi specifici che possono causare eccezioni per prevenirle
+
+------------------------------------------------------------------------------------------------
+DOMANDA 3 - Cosa significa che un file viene aperto con with open(...) as f:? Perché è preferibile rispetto a
+open() semplice?
+
+serve a "garantire" ce un file venga aperto/chiuso quando necessario. E' meglio usarlo in quanto
+piu pulito nel far girare il codice e meno propenso ad errori che possono dilagarsi nel codice
+
+------------------------------------------------------------------------------------------------
+DOMANDA 4 - Spiega la differenza tra una funzione che stampa un valore e una funzione che usa return.
+
+print mostra il valore come messaggio "ad uso singolo", return ti ridà un valore che può essere
+riutilizzato nel resto del programma
+
+------------------------------------------------------------------------------------------------
+DOMANDA 5 - Spiega cosa significa “parsing” di un file di log e perché è utile in ambito cloud.
+
+il parsing controlla dal log di un file che il file sia stato scritto correttamente tramite chiave
+valore o regole di sintassi/logiche
+Nel cloud viene utilizzato per troubleshooting per eventuali errori o per controllare alcuni aspetti
+legati alla sicurezza

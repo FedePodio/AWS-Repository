@@ -1,0 +1,20 @@
+a server cloud deployment example with sequence abc hidden inside
+this line contains a simple acb wrong order
+the system logs show a---b---c clearly separated but valid
+random text without useful pattern here
+another line with abc in correct order but not consecutive
+c comes before a so this is invalid cab
+a lot of noise text with b appearing before a and c missing
+production environment shows a b c spaced correctly and valid
+debug trace: abcabc repeated pattern in correct order
+incorrect sequence bac appears here
+cloud infrastructure scaling test a----b----c
+missing letters only a and b are present here
+full sequence abc appears at the end of this long line
+broken sequence ab only partial match
+this line contains multiple sequences abc and abc again
+wrong ordering cba detected in logs
+valid chain a1b2c3 embedded in structured data
+no meaningful data here just filler text
+another correct abc sequence hidden in the middle of sentence
+final line without any match

@@ -10,10 +10,18 @@ Titolo: Esercitazione PY 05
 # dizionario che è la concatenazione di tutti i dizionari indicati come parametro formale alla
 # funzione. Scrivete uno script che utilizzi tale funzione.
 
+
+def accettatore(*dizionari):
+    diz_concat = {}
+    for dizionario in dizionari:
+        diz_concat.update(dizionario)
+    return diz_concat
+
+
 diz1 = {'v1':1,'v2':2,'v3':3}
 diz2 = {'v4':4,'v5':5,'v6':6}
 diz3 = {'v7':7,'v8':8}
-
-def accettatore():
-    pass
-
+diz4 = {'v9':9, 'v10':10}
+diz5 = {}
+dizionario_finale = accettatore(diz1, diz2, diz3, diz4, diz5)
+print(dizionario_finale)
